@@ -1,11 +1,16 @@
 import { Admin } from "../layouts";
-import { home } from "../pages/Admin";
+import { AdminHome, UsersAdmin } from "../pages/Admin";
 
 const routesAdmin = [
   {
     path: "/admin",
     layout: Admin,
-    component: home,
+    component: AdminHome,
+  },
+  {
+    path: "/admin/users",
+    layout: Admin,
+    component: UsersAdmin,
   },
 ];
 export default routesAdmin;

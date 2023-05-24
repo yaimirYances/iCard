@@ -14,7 +14,7 @@ router_user.register(
 )
 
 urlpatterns = [
-    path("auth/me", UserView.as_view(),name="api"),
+    path("auth/me/", UserView.as_view(),name="apiAuth"),
     ##JWT##
     path('auth/login/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),

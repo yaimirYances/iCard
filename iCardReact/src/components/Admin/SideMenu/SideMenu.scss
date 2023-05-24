@@ -1,0 +1,25 @@
+.side-menu-admin {
+  .ui.menu {
+    width: 250px !important;
+    overflow: hidden;
+    padding-top: 4em;
+    z-index: 99 !important;
+    color: #fff !important;
+    font-size: 1.2rem;
+    font-weight: bold !important;
+    background-image: linear-gradient(270deg, #d8d8d8 30%, #fff 75%) !important;
+
+    i.icon {
+      float: initial !important;
+      margin: 0 !important;
+      margin-right: 10px !important;
+    }
+  }
+
+  .content {
+    position: absolute;
+    right: 0;
+    padding: 20px;
+    width: calc(100% - 250px);
+  }
+}

@@ -1,7 +1,7 @@
 pip install djangorestframework
 pip install drf-yasg ------ Documentar la API
 pip install djangorestframework-simplejwt --- instalando jwt
-
+pip install django-cors-headers --- Definiendo las cabeceras
 
 
 -----------------------------------------
@@ -16,3 +16,4 @@ yarn add sass --- instalando la dependencia sass
 yarn add react-router-dom --- manejador de rutas en frontend
 yarn add lodash --- cargar rutas desde un array
 yarn add formik yup -- para validar formularios
+yarn add react-toastify --- mostrar mensaje al usuario 

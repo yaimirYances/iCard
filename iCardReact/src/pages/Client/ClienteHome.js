@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const home = () => {
+export const ClienteHome = () => {
   return (
     <div>
         <p>home Client</p>

@@ -1,11 +1,11 @@
 import { Client } from "../layouts";
-import { home } from "../pages/Client";
+import { ClienteHome } from "../pages/Client";
 
 const routesClient = [
   {
     path: "/",
     layout: Client,
-    component: home,
+    component: ClienteHome,
   },
 ];
 export default routesClient;

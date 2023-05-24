@@ -4,7 +4,6 @@ import routes from "./routes";
 import { map } from "lodash";
 
 export const Navigation = () => {
-  console.log("Rutas---> ", routes);
   return (
     /**BrowserRouter: Toda la navegacion tiene que estar aqui */
     /**Routes: cuando encuentre la ruta no siga buscando */
