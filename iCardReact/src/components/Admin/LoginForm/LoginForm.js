@@ -9,7 +9,7 @@ import { useAuth } from "../../../hooks";
 
 //Para modificar los valores por defecto en formik se realiza un onChange
 export const LoginForm = () => {
-  const { login } = useAuth();//Haciendo login
+  const { login } = useAuth(); //Haciendo login
   const formik = useFormik({
     initialValues: {
       email: "",
@@ -25,7 +25,7 @@ export const LoginForm = () => {
         const response = await loginApi(formValue);
         //Devolviendo el token
         const { access } = response;
-        login(access);//pasando el token de acceso
+        login(access); //pasando el token de acceso
       } catch (error) {
         //Mostrando mensaje de la tarea programada
         toast.error(error.message);
