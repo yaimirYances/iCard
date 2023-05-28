@@ -13,7 +13,10 @@ export const UsersAdmin = () => {
   const { loading, users, getUsers, deleteUser } = useUser();
 
   useEffect(() => {
-    getUsers();
+    (async () => {
+      await getUsers();
+    })();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [refetch]);
 
   const openModal = () => setShow((prev) => !prev);

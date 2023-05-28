@@ -40,7 +40,7 @@ export async function getMeApi(token) {
 
 export async function getUserApi(token) {
   try {
-    const url = `${BASE_API}/api/gusers/`;
+    const url = `${BASE_API}/api/users/`;
     const params = {
       headers: {
         Authorization: `Bearer ${token}`,
@@ -56,7 +56,7 @@ export async function getUserApi(token) {
 
 export async function addUserApi(data, token) {
   try {
-    const url = `${BASE_API}/api/gusers/`;
+    const url = `${BASE_API}/api/users/`;
     const params = {
       method: "POST",
       headers: {
@@ -75,7 +75,7 @@ export async function addUserApi(data, token) {
 
 export async function updateUserApi(id, data, token) {
   try {
-    const url = `${BASE_API}/api/gusers/${id}/`;
+    const url = `${BASE_API}/api/users/${id}/`;
     const params = {
       method: "PATCH",
       headers: {
@@ -94,7 +94,7 @@ export async function updateUserApi(id, data, token) {
 
 export async function deleteUserApi(id, token) {
   try {
-    const url = `${BASE_API}/api/gusers/${id}/`;
+    const url = `${BASE_API}/api/users/${id}/`;
     const params = {
       method: "DELETE",
       headers: {

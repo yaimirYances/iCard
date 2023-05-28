@@ -16,12 +16,19 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+##########################################
+#Importando url de las imagenes
+from django.conf import settings
+from django.conf.urls.static import static
+##########################################
 
 #############################################################
 from drf_yasg.views import get_schema_view
 from drf_yasg import openapi
 
 from users.api.urls import router_user
+from categories.api.urls import router_category
+from products.api.urls import router_product
 
 
 schema_view = get_schema_view(
@@ -44,6 +51,11 @@ urlpatterns = [
         name="schema-swagger-ui",
     ),
     path("redocs/", schema_view.with_ui("redoc", cache_timeout=0), name="schema-redoc"),
-    path("api/g", include(router_user.urls)),#url formateadas
+    path("api/", include(router_user.urls)),#url usuarios
     path("api/", include("users.api.urls")),#url de las api
+    path("api/", include(router_category.urls)),#url categorias
+    path("api/", include(router_product.urls)),#url productos
 ]
+
+######################### URL PARA CARGAR IMAGENES #########################
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

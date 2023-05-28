@@ -9,6 +9,8 @@ https://docs.djangoproject.com/en/4.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
+
+import os
 import datetime
 from pathlib import Path
 
@@ -40,7 +42,10 @@ INSTALLED_APPS = [
     "rest_framework",  # api
     "drf_yasg",  # docuemntacion
     "users",
+    "categories",
+    "products",
     "corsheaders",  # cabeceras
+    "django_filters",  # filtros
 ]
 
 MIDDLEWARE = [
@@ -114,9 +119,7 @@ REST_FRAMEWORK = {
 
 #########################################################
 # Tiempo de vida del token
-SIMPLE_JWT ={
-    'ACCESS_TOKEN_LIFETIME':datetime.timedelta(days=120)
-}
+SIMPLE_JWT = {"ACCESS_TOKEN_LIFETIME": datetime.timedelta(days=120)}
 
 
 # Internationalization
@@ -134,7 +137,24 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
+
+#########################################################
+# Activando los archivos estaticos
 STATIC_URL = "static/"
+MEDIA_URL = "/uploads/"
+MEDIA_ROOT = os.path.join(BASE_DIR, "uploads")
+
+#########################################################
+# STATIC_URL = 'static/'
+# Indicando a django donde esta la carpeta static
+# STATICFILES_DIRS = [BASE_DIR / "static"]
+# print(STATICFILES_DIRS)
+
+# archivo multimedias
+# MEDIA_URL = '/media/' #url de almacenamiento
+# MEDIA_ROOT = BASE_DIR / 'media'
+# print(BASE_DIR / 'media')
+#########################################################
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field

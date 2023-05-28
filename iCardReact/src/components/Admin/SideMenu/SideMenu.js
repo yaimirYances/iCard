@@ -54,8 +54,8 @@ function MenuLeft(props) {
 
       <Menu.Item
         as={Link}
-        to={"/admin/producs"}
-        active={pathname === "/admin/producs"}
+        to={"/admin/products"}
+        active={pathname === "/admin/products"}
       >
         <Icon name="cart" />
         Productos
