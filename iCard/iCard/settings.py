@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     "users",
     "categories",
     "products",
+    "tables",
     "corsheaders",  # cabeceras
     "django_filters",  # filtros
 ]

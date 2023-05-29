@@ -4,6 +4,7 @@ import {
   UsersAdmin,
   CategoriesAdmin,
   ProductAdmin,
+  TablesAdmin,
 } from "../pages/Admin";
 
 const routesAdmin = [
@@ -26,6 +27,11 @@ const routesAdmin = [
     path: "/admin/products",
     layout: Admin,
     component: ProductAdmin,
+  },
+  {
+    path: "/admin/tables",
+    layout: Admin,
+    component: TablesAdmin,
   },
 ];
 export default routesAdmin;
