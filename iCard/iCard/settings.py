@@ -45,6 +45,8 @@ INSTALLED_APPS = [
     "categories",
     "products",
     "tables",
+    "orders",
+    "payments",
     "corsheaders",  # cabeceras
     "django_filters",  # filtros
 ]

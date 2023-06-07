@@ -2,7 +2,9 @@ import { useState } from "react";
 import {
   addProductApi,
   deleteProductApi,
+  getProductApi,
   getProductsApi,
+  getProductsByCategoryApi,
   updateProductApi,
 } from "../api/Product";
 import { useAuth } from "./useAuth";
@@ -21,6 +23,15 @@ export const useProduct = () => {
       setProducts(response);
     } catch (error) {
       setLoading(false);
+      setError(error);
+    }
+  };
+
+  const getProduct = async (id) => {
+    try {
+      const response = await getProductApi(id);
+      return response;
+    } catch (error) {
       setError(error);
     }
   };
@@ -60,6 +71,18 @@ export const useProduct = () => {
     }
   };
 
+  const getProductsByCategory = async (idCategory) => {
+    try {
+      setLoading(true);
+      const response = await getProductsByCategoryApi(idCategory);
+      setLoading(false);
+      setProducts(response);
+    } catch (error) {
+      setLoading(false);
+      setError(error);
+    }
+  };
+
   return {
     loading,
     error,
@@ -68,5 +91,7 @@ export const useProduct = () => {
     addProduct,
     updateProduct,
     deleteProduct,
+    getProduct,
+    getProductsByCategory,
   };
 };

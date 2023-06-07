@@ -32,6 +32,8 @@ from users.api.urls import router_user
 from categories.api.urls import router_category
 from products.api.urls import router_product
 from tables.api.urls import router_table
+from orders.api.urls import router_order
+from payments.api.urls import router_payment
 
 
 schema_view = get_schema_view(
@@ -59,6 +61,8 @@ urlpatterns = [
     path("api/", include(router_category.urls)),  # url categorias
     path("api/", include(router_product.urls)),  # url productos
     path("api/", include(router_table.urls)),  # url tablas
+    path("api/", include(router_order.urls)),  # url Ordenes
+    path("api/", include(router_payment.urls)),  # url Pagos
 ]
 
 ######################### URL PARA CARGAR IMAGENES #########################
